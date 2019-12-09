@@ -1,0 +1,44 @@
+{
+  "name": "jest-tests",
+  "version": "1.0.0",
+  "description": "Standard Specs tests.",
+  "repository": "",
+  "author": "Anand Ganesh",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/allure-js-commons": "0.0.1",
+    "@types/jest": "^24.0.23",
+    "@types/jest-json-schema": "^2.1.1",
+    "@types/node": "^12.12.7",
+    "@types/node-fetch": "^2.5.3",
+    "allure-commandline": "^2.3.5",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-run-command": "0.0.10",
+    "jest": "^24.9.0",
+    "jest-html-reporter": "^2.7.0",
+    "jest-stare": "^1.25.0",    
+    "minimist": "^1.2.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.5.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "allure-js-commons": "^1.3.2",
+    "jest-allure": "^0.1.1",
+    "jest-json-schema": "^2.1.0",
+    "log4js": "^6.1.0",
+    "node-fetch": "^2.6.0",
+    "winston": "^3.2.1"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development nodemon --exec ts-node src/index.ts",
+    "test": "NODE_ENV=test jest --watch",
+    "report": "allure serve",
+    "allure-report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  }
+}
