@@ -60,7 +60,7 @@ jest-html-reporter: <br />
 ## Test Reports - Sample Screenshots
 
 ![report-01](https://github.com/a5g/jest-api-test-boilerplate/blob/master/assets/report-01.jpg)
-<br />
+<br/>------------------------------------------------------------------<br/>
 ![report-02](https://github.com/a5g/jest-api-test-boilerplate/blob/master/assets/report-02.jpg)
 <br />
 ![report-03](https://github.com/a5g/jest-api-test-boilerplate/blob/master/assets/report-03.jpg)
@@ -85,7 +85,4 @@ jest-html-reporter: <br />
 
 ## Support
 
-For any support feel free to reach out to me at gani.anand@gmail.com.
-I can provide full assitance to setup API tests
-
-https://github.com/s3anand/api-test-jest-boilerplate.git
+For any support or corporate trainings, feel free to reach out to me at gani.anand@gmail.com.

@@ -1,7 +1,7 @@
 {
-  "name": "jest-tests",
+  "name": "jest-api-test-boilerplate",
   "version": "1.0.0",
-  "description": "Standard Specs tests.",
+  "description": "A boilerplate project to start API test automation using jest.",
   "repository": "",
   "author": "Anand Ganesh",
   "license": "ISC",
