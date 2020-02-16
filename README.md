@@ -77,6 +77,12 @@ jest-html-reporter: <br />
 <br />
 ![report-09](https://github.com/a5g/jest-api-test-boilerplate/blob/master/assets/report-09.jpg)
 
+## Logs
+
+The test project provides a clean logs which include api request and response, test method details etc., <br />
+Info logs are avilable at `logs/info.log` <br />
+Error logs are avilable at `logs/error.log`
+
 ## Preferred Editor
 
 [VSCode](https://code.visualstudio.com/download) with extensions
