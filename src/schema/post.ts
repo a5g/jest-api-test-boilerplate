@@ -5,10 +5,10 @@ export default {
   type: 'object',
   properties: {
     userId: {
-      type: 'string',
+      type: 'number',
     },
     id: {
-      type: 'string',
+      type: 'number',
     },
     title: {
       type: 'string',
@@ -16,9 +16,6 @@ export default {
     body: {
       type: 'string',
     },
-    rfk: {
-      type: 'number',
-    },
   },
-  required: ['userId', 'id', 'title', 'body', 'rfk'],
+  required: ['userId', 'id', 'title', 'body'],
 }

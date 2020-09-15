@@ -7,5 +7,4 @@ declare global {
   const reporter: Reporter
   const config: Config
   const util: Util
-  // const util
 }

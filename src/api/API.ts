@@ -1,6 +1,4 @@
 import fetch from 'node-fetch'
-// import * as config from '../../config'
-// import { util } from '../utils'
 
 const DEFAULT_HEADERS = {
   Accept: 'application/json',
