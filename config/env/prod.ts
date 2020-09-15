@@ -1,5 +1,5 @@
 export default {
   apis: {
-    jsonPlaceholder: 'https://jsonplaceholder.typicode.com'
+    jsonPlaceholder: 'https://jsonplaceholder.typicode.com',
   },
 }

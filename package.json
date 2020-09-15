@@ -11,8 +11,15 @@
     "@types/jest-json-schema": "^2.1.1",
     "@types/node": "^12.12.7",
     "@types/node-fetch": "^2.5.3",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "allure-commandline": "^2.3.5",
     "del": "^5.1.0",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-run-command": "0.0.10",
@@ -29,6 +36,7 @@
   },
   "dependencies": {
     "allure-js-commons": "^1.3.2",
+    "dotenv": "^8.2.0",
     "jest-allure": "^0.1.1",
     "jest-json-schema": "^2.1.0",
     "log4js": "^6.1.0",
@@ -37,7 +45,8 @@
   },
   "scripts": {
     "start": "NODE_ENV=development nodemon --exec ts-node src/index.ts",
-    "test": "NODE_ENV=test jest --watch",
+    "lint": "eslint . --ext .ts",
+    "test": "NODE_ENV=staging jest --watch",
     "report": "allure serve",
     "allure-report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
   }

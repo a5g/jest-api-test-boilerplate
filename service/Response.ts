@@ -1,6 +1,8 @@
 export class Response {
   public status: number
+
   public statusText: string
+
   public body: any
 
   // constructor() {}

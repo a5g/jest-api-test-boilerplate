@@ -3,8 +3,8 @@ import { createLogger, format, transports } from 'winston'
 
 const { combine, timestamp, label, printf } = format
 
-const myFormat = printf(({ level, message, label, timestamp }) => {
-  return `${timestamp} [${level.toUpperCase()}] ${message}`
+const myFormat = printf(({ level, message, timestamp: ts }) => {
+  return `${ts} [${level.toUpperCase()}] ${message}`
 })
 
 export class Logger {
@@ -54,7 +54,7 @@ export class Logger {
 //         console: { type: 'stdout' },
 //       },
 //       categories: {
-//         // rfk: { appenders: ['console'], level: 'info' },
+//         // temp: { appenders: ['console'], level: 'info' },
 //         default: { appenders: ['info', 'errors'], level: 'info' },
 //         http: { appenders: ['access'], level: 'info' },
 //       },

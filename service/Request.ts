@@ -1,8 +1,12 @@
 export class Request {
   public url: string
+
   public method: string
+
   public headers: any
+
   public body: any
+
   public curl: string
 
   // constructor() {}

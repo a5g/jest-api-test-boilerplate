@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Request } from './Request'
 import { Response } from './Response'
 import { Logger } from 'winston'

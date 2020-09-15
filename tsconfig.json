@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "lib": ["es6", "es2017", "esnext.asynciterable"],
     "esModuleInterop": true,
     "sourceMap": true,
     "outDir": "./dist",
@@ -15,24 +15,21 @@
     "noUnusedParameters": true,
     "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
-
     "declaration": false,
     "noLib": false,
-
     "allowSyntheticDefaultImports": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "types": [
-      "allure-js-commons",
-      "jest",
-      "jest-json-schema",
-      "node",
-      "node-fetch"
+      "@types/jest",
+      "@types/jest-json-schema",
+      "@types/node",
+      "@types/node-fetch"
     ],
     "typeRoots": ["node_modules/@types"]
   },
-  "exclude": ["node_modules", "typings"],
+  "exclude": ["node_modules"],
   "include": [
     "setup.d.ts",
     "service/setup.d.ts",

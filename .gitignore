@@ -80,10 +80,8 @@ allure-results/
 allure-report/
 screenshots/
 __screenshots__/
-test/rfk
 test-report.html
 junit-results.html
-__tests__/rfk-temp/
 # vscode settings
 #.vscode
 

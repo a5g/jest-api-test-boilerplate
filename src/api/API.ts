@@ -1,6 +1,6 @@
-import * as config from '../../config'
 import fetch from 'node-fetch'
-import { util } from '../utils'
+// import * as config from '../../config'
+// import { util } from '../utils'
 
 const DEFAULT_HEADERS = {
   Accept: 'application/json',
@@ -10,8 +10,8 @@ const DEFAULT_HEADERS = {
 class API {
   static environment: string = ''
 
-  static setEnvironment(newEnvironment: string = config.runtime.env): void {
-    this.environment = newEnvironment
+  static setEnvironment(environment: string = config.runtime.env): void {
+    this.environment = environment
   }
 
   static getServiceDetails = (msg = '') => {
@@ -28,7 +28,9 @@ class API {
   }
 
   private defaultHost: string
+
   private path: string
+
   private headers: any
 
   constructor(defaultHost: string, path: string = '') {
@@ -138,31 +140,31 @@ class API {
 
           return resp
         })
-      } else {
-        return res.text().then((text: string) => {
-          const resp: any = {}
-          resp.status = res.status
-          resp.statusText = res.statusText
-          resp.body = text
-
-          response.setResponse(resp)
-
-          logger.error('============= API (response not ok) =============')
-          logger.error(`request: ${request.curl}`)
-          logger.error(`response [status]: ${resp.status}`)
-          logger.error(
-            `response [statusText]: ${JSON.stringify(resp.statusText)}`,
-          )
-          logger.error(`response [body]: ${JSON.stringify(resp.body)}`)
-
-          const customError = this.buildErrorMessage({
-            rqst: request.getRequest(), // API.getRequest(),
-            resp: response.getResponse(),
-          })
-
-          throw new Error(customError)
-        })
       }
+
+      return res.text().then((text: string) => {
+        const resp: any = {}
+        resp.status = res.status
+        resp.statusText = res.statusText
+        resp.body = text
+
+        response.setResponse(resp)
+
+        logger.error('============= API (response not ok) =============')
+        logger.error(`request: ${request.curl}`)
+        logger.error(`response [status]: ${resp.status}`)
+        logger.error(
+          `response [statusText]: ${JSON.stringify(resp.statusText)}`,
+        )
+        logger.error(`response [body]: ${JSON.stringify(resp.body)}`)
+
+        const customError = this.buildErrorMessage({
+          rqst: request.getRequest(), // API.getRequest(),
+          resp: response.getResponse(),
+        })
+
+        throw new Error(customError)
+      })
     }
   }
 

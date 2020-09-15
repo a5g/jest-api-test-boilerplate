@@ -1,5 +1,3 @@
-const { defaults } = require('jest-config')
-
 module.exports = {
   verbose: false,
   globals: {
@@ -10,16 +8,8 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  moduleFileExtensions: [
-    ...defaults.moduleFileExtensions,
-    'ts',
-    'tsx',
-    'js',
-    'jsx',
-    'json',
-    'node',
-  ],
+  testMatch: ['<rootDir>/__tests__/**/?(*.)(spec|test).{ts,tsx}'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   reporters: [
     'default',
     [
@@ -38,7 +28,7 @@ module.exports = {
       './node_modules/jest-html-reporter',
       {
         outputPath: 'results/jest-html-reporter/report.html',
-        pageTitle: 'Std Specs Test Report',
+        pageTitle: 'API Test Report',
         includeConsoleLog: true,
         includeFailureMsg: true,
         // theme: 'darkTheme',
